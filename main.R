@@ -10,3 +10,7 @@ df_venta_diaria <- tratamiento_datos(df_venta_diaria)
 
 #3 Graficamos la serie de ventas de la tienda 24512 ----
 graficar_variable_tienda(df_venta_diaria,"VENTA",24512)
+
+
+#4 Graficamos la serie de ventas de la tienda 14526 ----
+graficar_variable_tienda(df_venta_diaria,"VENTA",14526,"#009991")
