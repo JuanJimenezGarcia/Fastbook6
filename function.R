@@ -74,3 +74,22 @@ imputar_missings_vector <- function(vector){
   }
   return(vector)
 }
+
+#graficar_variable_tienda ----
+#Pinta el grafico de la variable seleccionada para la tienda seleccionada
+#
+#Recibe dataframe, variable que se quiere pintar y tienda a seleccionar
+#
+#Pinta el grafico 
+graficar_variable_tienda <- function(df_venta_diaria,variable,tienda,
+                                     color = "#345294"){
+  
+  
+  hchart(df_venta_diaria[(df_venta_diaria$TIENDA==tienda),], 
+         type = "line", 
+         hcaes(x = DIA, 
+               y = !!variable)) %>% 
+    hc_title(text = paste0(variable," POR DIA TIENDA ",tienda)) %>%
+    hc_colors(color)
+}
+
